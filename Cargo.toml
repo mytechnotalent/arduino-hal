@@ -1,0 +1,23 @@
+[package]
+name = "arduino-hal"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["Kevin Thomas"]
+description = "A bare-metal Rust, register-level Hardware Abstraction Layer (HAL) for the ATmega328P microcontroller, primarily used on the Arduino Uno R3."
+repository = "https://github.com/mytechnotalent/arduino-hal"
+categories = ["hardware-support", "embedded", "no-std"]
+keywords = ["arduino", "avr", "atmega328p", "hal", "embedded"]
+exclude = ["*.png"]
+[package.metadata]
+docs = "Bare-metal register-level HAL for the ATmega328P microcontroller"
+avr-target = "avr-none"
+avr-mcu = "atmega328p"
+avr-frequency = "16000000"
+
+[[bin]]
+name = "demo"
+[profile.dev]
+panic = "abort"
+[profile.release]
+panic = "abort"

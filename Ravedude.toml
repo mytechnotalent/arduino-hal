@@ -1,0 +1,3 @@
+[general]
+board = "uno"
+output-mode = "ascii"
